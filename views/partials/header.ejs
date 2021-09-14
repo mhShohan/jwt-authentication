@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JWT Authentication</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <nav>
+            <h1><a href="/">JWT Authentication</a></h1>
+            <ul>
+                <% if(user) {%>
+                <li>welcome, <%= user.email.split('@')[0] %></li>
+                <li><a href="/logout">Logout</a></li>
+                <%} else{ %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup" class="btn">Signup</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </body>
+</html>
